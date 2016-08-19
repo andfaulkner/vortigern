@@ -66,6 +66,7 @@ Vortigern uses the following libraries and tools:
 #### Developer Experience
 - [Typings](https://github.com/typings/typings) for installing type definitions of external libraries.
 - [tslint](https://github.com/palantir/tslint) for linting TypeScript files.
+- [eslint](http://eslint.org/) for additional linting rules
 - [stylelint](https://github.com/stylelint/stylelint) for linting styles.
 - [Redux Logger](https://github.com/theaqua/redux-logger)
 - [Redux DevTools](https://github.com/gaearon/redux-devtools)
