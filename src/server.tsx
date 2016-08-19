@@ -1,28 +1,33 @@
 const appConfig = require('../config/main');
 
+// Ensure promises are available
 import * as e6p from 'es6-promise';
 (e6p as any).polyfill();
+
 import 'isomorphic-fetch';
 
+// Modules for React ecosystem components
 import * as React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
-
 import { Provider } from 'react-redux';
 import { createMemoryHistory, match } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 const { ReduxAsyncConnect, loadOnServer } = require('redux-connect');
+
+// Load custom React & Redux-related code & data for routing, storage, and load of initial page
 import { configureStore } from './app/redux/store';
 import routes from './app/routes';
-
 import { Html } from './app/containers';
 const manifest = require('../build/manifest.json');
 
+// load server modules & server helper modules
 const express = require('express');
 const path = require('path');
 const compression = require('compression');
 const Chalk = require('chalk');
 const favicon = require('serve-favicon');
 
+// instatiate server object
 const app = express();
 
 app.use(compression());
@@ -32,6 +37,7 @@ if (process.env.NODE_ENV !== 'production') {
   const webpackConfig = require('../config/webpack/dev');
   const webpackCompiler = webpack(webpackConfig);
 
+  // set up hot-loading
   app.use(require('webpack-dev-middleware')(webpackCompiler, {
     publicPath: webpackConfig.output.publicPath,
     stats: { colors: true },
@@ -50,6 +56,7 @@ app.use(favicon(path.join(__dirname, '../src/favicon.ico')));
 
 app.use('/public', express.static(path.join(__dirname, '../build/public')));
 
+// middleware run on all routes
 app.get('*', (req, res) => {
   const location = req.url;
   const memoryHistory = createMemoryHistory(req.originalUrl);
