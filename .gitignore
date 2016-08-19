@@ -40,3 +40,6 @@ typings
 
 # JetBrains
 .idea
+
+*.sublime-project
+*.sublime-workspace
