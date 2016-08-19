@@ -19,7 +19,7 @@ const store: Redux.Store = configureStore(
 const history = syncHistoryWithStore(browserHistory, store);
 
 ReactDOM.render(
-  <Provider store={store} key="provider">
+  <Provider store={store} key='provider'>
     <Router
       history={history}
       render={(props) =>

@@ -67,7 +67,7 @@ app.get('*', (req, res) => {
 
         loadOnServer(asyncRenderData).then(() => {
           const markup = ReactDOMServer.renderToString(
-            <Provider store={store} key="provider">
+            <Provider store={store} key='provider'>
               <ReduxAsyncConnect {...renderProps} />
             </Provider>
           );

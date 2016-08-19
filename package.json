@@ -88,6 +88,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.4.5",
+    "node-sass": "^3.8.0",
     "phantomjs-prebuilt": "^2.1.7",
     "postcss-assets": "^4.1.0",
     "postcss-cssnext": "^2.6.0",
@@ -102,7 +103,7 @@
     "style-loader": "^0.13.1",
     "stylelint": "^6.2.2",
     "ts-loader": "^0.8.2",
-    "tslint": "^3.13.0",
+    "tslint": "^3.14.0",
     "tslint-loader": "^2.1.5",
     "tslint-react": "^0.4.0",
     "typescript": "^1.8.10",
@@ -119,7 +120,9 @@
     "express": "^4.13.4",
     "history": "^2.1.0",
     "isomorphic-fetch": "^2.2.1",
+    "knex": "^0.11.10",
     "lodash": "^4.15.0",
+    "pg": "^6.1.0",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
     "react-helmet": "^3.0.2",
@@ -128,6 +131,7 @@
     "react-router-redux": "^4.0.5",
     "redux": "^3.5.2",
     "redux-connect": "^2.4.0",
-    "redux-thunk": "^2.0.1"
+    "redux-thunk": "^2.0.1",
+    "sequelize": "^3.24.1"
   }
 }

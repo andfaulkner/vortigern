@@ -21,7 +21,7 @@ class Html extends React.Component<IHtmlProps, {}> {
 
     const styles = this.resolve(['vendor.css', 'app.css']);
     const renderStyles = styles.map((src, i) =>
-      <link key={i} rel="stylesheet" type="text/css" href={src} />
+      <link key={i} rel='stylesheet' type='text/css' href={src} />
     );
 
     const scripts = this.resolve(['vendor.js', 'app.js']);
@@ -30,7 +30,10 @@ class Html extends React.Component<IHtmlProps, {}> {
     );
 
     // tslint:disable-next-line:max-line-length
-    const initialState = (<script dangerouslySetInnerHTML={{__html: `window.__INITIAL_STATE__=${JSON.stringify(store.getState())};`}} charSet="UTF-8" />);
+    const initialState = (
+      <script dangerouslySetInnerHTML={{
+        __html: `window.__INITIAL_STATE__=${JSON.stringify(store.getState())};`
+      }} charSet='UTF-8' />);
 
     return (
       <html>
@@ -42,10 +45,10 @@ class Html extends React.Component<IHtmlProps, {}> {
           {head.script.toComponent()}
 
           {renderStyles}
-          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel='shortcut icon' href='/favicon.ico' />
         </head>
         <body>
-          <main id="app" dangerouslySetInnerHTML={{ __html: markup }}></main>
+          <main id='app' dangerouslySetInnerHTML={{ __html: markup }}></main>
           {initialState}
           {renderScripts}
         </body>

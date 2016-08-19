@@ -26,12 +26,12 @@ class Counter extends React.Component<IProps, void> {
       <div className={s.counter}>
         <h4>Counter Example</h4>
         <button
-          name="incBtn"
+          name='incBtn'
           onClick={increment}>
             INCREMENT
         </button>
         <button
-          name="decBtn"
+          name='decBtn'
           onClick={decrement}
           disabled={counter.count <= 0}>
             DECREMENT
